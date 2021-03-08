@@ -157,6 +157,7 @@ $grey: #757575;
         &:focus {
           background: $primary-hover;
           border: none !important;
+          outline: none;
         }
       }
     }
