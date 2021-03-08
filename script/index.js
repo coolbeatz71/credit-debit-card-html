@@ -88,3 +88,20 @@ var expirationdate_mask = new IMask(expirationdate, {
     return date;
   },
 });
+
+cardnumber_mask.on("accept", function () {
+  switch (cardnumber_mask.masked.currentMask.cardtype) {
+    case "visa":
+      $("i").removeClass("suffix-mastercard");
+      $("i").addClass("suffix-visa");
+      break;
+    case "mastercard":
+      $("i").removeClass("suffix-visa");
+      $("i").addClass("suffix-mastercard");
+      break;
+    default:
+      $("i").removeClass("suffix-visa");
+      $("i").removeClass("suffix-mastercard");
+      break;
+  }
+});
