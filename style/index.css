@@ -4,7 +4,7 @@
 
 .container {
   width: 35rem;
-  padding: 3rem 0;
+  padding: 2.5rem 0;
   margin: 2rem auto;
   display: flex;
   flex-flow: column;
@@ -69,7 +69,7 @@
           outline: none;
           border: 1px solid #219bb2; }
           .container .form .form-group .outlined-input-field .outlined-text-field:focus + label {
-            color: #219bb2; }
+            color: #219bb2 !important; }
       .container .form .form-group .inline-form-group {
         display: flex;
         flex-flow: row;
@@ -82,7 +82,7 @@
           flex: 1 1 15em; }
       .container .form .form-group .button {
         float: right;
-        width: 9rem;
+        width: 9.2rem;
         height: 42px;
         background: #219bb2;
         border: none;

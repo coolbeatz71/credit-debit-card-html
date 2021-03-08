@@ -14,7 +14,7 @@ $grey: #757575;
 
 .container {
   width: 35rem;
-  padding: 3rem 0;
+  padding: 2.5rem 0;
   margin: 2rem auto;
   display: flex;
   flex-flow: column;
@@ -97,7 +97,7 @@ $grey: #757575;
           border: 1px solid $primary;
 
           + label {
-            color: $primary;
+            color: $primary !important;
           }
         }
       }
@@ -120,7 +120,7 @@ $grey: #757575;
 
       .button {
         float: right;
-        width: 9rem;
+        width: 9.2rem;
         height: 42px;
         background: $primary;
         border: none;

@@ -2,6 +2,7 @@
 const focusIn = (id) => {
   $(`${id} ~ label`).animate(
     {
+      color: "#219bb2",
       fontSize: "0.6rem",
       top: "-0.7rem",
       padding: "0.25rem",
@@ -13,6 +14,7 @@ const focusIn = (id) => {
 const focusOut = (id) => {
   $(`${id} ~ label`).animate(
     {
+      color: "#219bb2",
       fontSize: "12.5px",
       top: "0.8rem",
       padding: 0,
