@@ -20,20 +20,10 @@ var cardnumber_mask = new IMask(cardnumber, {
       cardtype: "diners",
     },
     {
-      mask: "0000 0000 0000 0000",
+      mask: "0000-0000-0000-0000",
       regex: "^(5[1-5]\\d{0,2}|22[2-9]\\d{0,1}|2[3-7]\\d{0,2})\\d{0,12}",
       cardtype: "mastercard",
     },
-    // {
-    //     mask: '0000-0000-0000-0000',
-    //     regex: '^(5019|4175|4571)\\d{0,12}',
-    //     cardtype: 'dankort'
-    // },
-    // {
-    //     mask: '0000-0000-0000-0000',
-    //     regex: '^63[7-9]\\d{0,13}',
-    //     cardtype: 'instapayment'
-    // },
     {
       mask: "0000 000000 00000",
       regex: "^(?:2131|1800)\\d{0,11}",
@@ -49,13 +39,9 @@ var cardnumber_mask = new IMask(cardnumber, {
       regex: "^(?:5[0678]\\d{0,2}|6304|67\\d{0,2})\\d{0,12}",
       cardtype: "maestro",
     },
-    // {
-    //     mask: '0000-0000-0000-0000',
-    //     regex: '^220[0-4]\\d{0,12}',
-    //     cardtype: 'mir'
-    // },
+
     {
-      mask: "0000 0000 0000 0000",
+      mask: "0000-0000-0000-0000",
       regex: "^4\\d{0,15}",
       cardtype: "visa",
     },
@@ -86,9 +72,19 @@ var securitycode_mask = new IMask(securitycode, {
 });
 
 var expirationdate_mask = new IMask(expirationdate, {
-  mask: "MM{/}YY",
-  groups: {
-    YY: new IMask.MaskedPattern.Group.Range([0, 99]),
-    MM: new IMask.MaskedPattern.Group.Range([1, 12]),
+  mask: Date,
+  pattern: "`m{/}`Y",
+  format: function (date) {
+    var month = date.getMonth();
+    var year = date.getFullYear();
+
+    if (month < 10) month = "0" + month;
+
+    return [month, year].join("/");
+  },
+  parse: function (str) {
+    var yearMonthDay = str.split("/");
+    var date = new Date(yearMonthDay[2], yearMonthDay[0]);
+    return date;
   },
 });

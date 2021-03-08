@@ -3,27 +3,37 @@
   font-family: Poppins; }
 
 .container {
-  width: 50rem;
-  margin: 4rem auto;
+  width: 35rem;
+  padding: 2.5rem 0;
+  margin: 2rem auto;
   display: flex;
-  flex-flow: column; }
+  flex-flow: column;
+  border: 1px solid rgba(117, 117, 117, 0.5);
+  border-radius: 4px; }
   .container .logo {
     margin: 0 4rem;
-    width: 280px;
-    height: 63.72px;
+    width: 220px;
+    height: 60px;
     background: url("../img/savepay.svg");
     background-repeat: no-repeat;
     background-size: contain; }
   .container .title {
     margin: 0 4rem;
-    font-size: 20.59px;
+    font-size: 16px;
     font-weight: bold;
     color: #333333; }
+  .container .payment-details {
+    color: rgba(51, 51, 51, 0.6);
+    margin: 2rem 4rem;
+    font-size: 13px;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 3rem; }
   .container .form {
     padding: 2rem 4rem; }
     .container .form .form-group {
       width: 100%;
-      margin-bottom: 2rem; }
+      margin-bottom: 1.2rem; }
       .container .form .form-group .outlined-input-field {
         position: relative;
         width: 100%; }
@@ -39,18 +49,19 @@
           color: #757575;
           cursor: text;
           position: absolute;
-          top: 1rem;
-          left: 1rem; }
+          top: 0.8rem;
+          left: 1rem;
+          font-size: 12.5px; }
         .container .form .form-group .outlined-input-field .outlined-text-field {
           appearance: none;
           -moz-appearance: none;
           -webkit-appearance: none;
           background-color: #fff;
-          border: 1pt solid #757575;
+          border: 1pt solid rgba(117, 117, 117, 0.5);
           border-radius: 4px;
           color: #757575;
-          padding: 1rem;
-          width: calc(100% - 2.1rem); }
+          padding: 0.6rem;
+          width: calc(100% - 1.3rem); }
         .container .form .form-group .outlined-input-field .outlined-text-field:hover {
           border-color: #219bb2; }
         .container .form .form-group .outlined-input-field .outlined-text-field:focus {
@@ -58,7 +69,7 @@
           outline: none;
           border: 1px solid #219bb2; }
           .container .form .form-group .outlined-input-field .outlined-text-field:focus + label {
-            color: #219bb2; }
+            color: #219bb2 !important; }
       .container .form .form-group .inline-form-group {
         display: flex;
         flex-flow: row;
@@ -68,19 +79,23 @@
         .container .form .form-group .inline-form-group div:nth-of-type(1) {
           margin-right: 1rem; }
         .container .form .form-group .inline-form-group div:nth-of-type(2) {
-          flex: 1 1 20em; }
+          flex: 1 1 15em; }
       .container .form .form-group .button {
         float: right;
-        width: 13.1rem;
-        height: 55px;
+        width: 9.2rem;
+        height: 42px;
         background: #219bb2;
         border: none;
         border-radius: 5px;
-        font-size: 22px;
+        font-size: 16px;
         font-weight: 500;
         color: #fff;
-        margin-top: 15px;
-        cursor: pointer; }
+        margin-top: 5px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
+        .container .form .form-group .button:hover, .container .form .form-group .button:active, .container .form .form-group .button:focus {
+          background: #43afbf;
+          border: none !important; }
   .container .verified {
     display: flex;
     width: 200px;
@@ -90,4 +105,5 @@
     background: url("../img/verified.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 2rem auto; }
+    margin: 2rem auto;
+    margin-bottom: 0; }
