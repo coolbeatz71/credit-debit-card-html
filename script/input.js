@@ -1,14 +1,14 @@
 const primaryColor = "#219bb2";
 
 //JS to move label on focus
-const focusIn = (id) => {
+const focusIn = (id, animate = 80) => {
   $(`${id} ~ label`).animate(
     {
       fontSize: "0.6rem",
       top: "-0.7rem",
       padding: "0.25rem",
     },
-    80,
+    animate,
   );
 };
 
@@ -25,7 +25,8 @@ const focusOut = (id) => {
 
 // name field
 $("#name").on("focusin", function () {
-  focusIn("#name");
+  if ($(this).val() === "") focusIn("#name");
+  else focusIn("#name", 0);
 });
 $("#name").on("focusout", function () {
   if ($(this).val() === "") focusOut("#name");
@@ -34,7 +35,8 @@ $("#name").on("focusout", function () {
 
 // card number field
 $("#cardnumber").on("focusin", function () {
-  focusIn("#cardnumber");
+  if ($(this).val() === "") focusIn("#cardnumber");
+  focusIn("#cardnumber", 0);
 });
 $("#cardnumber").on("focusout", function () {
   if ($(this).val() === "") focusOut("#cardnumber");
@@ -43,7 +45,8 @@ $("#cardnumber").on("focusout", function () {
 
 // expiry date field
 $("#expirationdate").on("focusin", function () {
-  focusIn("#expirationdate");
+  if ($(this).val() === "") focusIn("#expirationdate");
+  focusIn("#expirationdate", 0);
 });
 $("#expirationdate").on("focusout", function () {
   if ($(this).val() === "") focusOut("#expirationdate");
@@ -52,7 +55,8 @@ $("#expirationdate").on("focusout", function () {
 
 // security code field
 $("#securitycode").on("focusin", function () {
-  focusIn("#securitycode");
+  if ($(this).val() === "") focusIn("#securitycode");
+  focusIn("#securitycode", 0);
 });
 $("#securitycode").on("focusout", function () {
   if ($(this).val() === "") focusOut("#securitycode");
