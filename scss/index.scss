@@ -1,4 +1,5 @@
 $primary: #219bb2;
+$primary-hover: #43afbf;
 $success: rgb(39, 185, 110);
 $error: rgb(223, 56, 72);
 $dark: rgba(0, 0, 0, 0.65);
@@ -12,14 +13,17 @@ $grey: #757575;
 }
 
 .container {
-  width: 50rem;
-  margin: 4rem auto;
+  width: 35rem;
+  padding: 3rem 0;
+  margin: 2rem auto;
   display: flex;
   flex-flow: column;
+  border: 1px solid rgba($grey, 0.5);
+  border-radius: 4px;
   .logo {
     margin: 0 4rem;
-    width: 280px;
-    height: 63.72px;
+    width: 220px;
+    height: 60px;
     background: url("../img/savepay.svg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -27,16 +31,25 @@ $grey: #757575;
 
   .title {
     margin: 0 4rem;
-    font-size: 20.59px;
+    font-size: 16px;
     font-weight: bold;
     color: $title;
+  }
+
+  .payment-details {
+    color: rgba($title, 0.6);
+    margin: 2rem 4rem;
+    font-size: 13px;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 3rem;
   }
 
   .form {
     padding: 2rem 4rem;
     .form-group {
       width: 100%;
-      margin-bottom: 2rem;
+      margin-bottom: 1.2rem;
       .outlined-input-field {
         position: relative;
         width: 100%;
@@ -57,8 +70,9 @@ $grey: #757575;
           color: $grey;
           cursor: text;
           position: absolute;
-          top: 1rem;
+          top: 0.8rem;
           left: 1rem;
+          font-size: 12.5px;
         }
 
         .outlined-text-field {
@@ -66,11 +80,11 @@ $grey: #757575;
           -moz-appearance: none;
           -webkit-appearance: none;
           background-color: #fff;
-          border: 1pt solid $grey;
+          border: 1pt solid rgba($grey, 0.5);
           border-radius: 4px;
           color: $grey;
-          padding: 1rem;
-          width: calc(100% - 2.1rem);
+          padding: 0.6rem;
+          width: calc(100% - 1.3rem);
         }
 
         .outlined-text-field:hover {
@@ -100,22 +114,30 @@ $grey: #757575;
         }
 
         div:nth-of-type(2) {
-          flex: 1 1 20em;
+          flex: 1 1 15em;
         }
       }
 
       .button {
         float: right;
-        width: 13.1rem;
-        height: 55px;
+        width: 9rem;
+        height: 42px;
         background: $primary;
         border: none;
         border-radius: 5px;
-        font-size: 22px;
+        font-size: 16px;
         font-weight: 500;
         color: #fff;
-        margin-top: 15px;
+        margin-top: 5px;
         cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &:hover,
+        &:active,
+        &:focus {
+          background: $primary-hover;
+          border: none !important;
+        }
       }
     }
   }
@@ -130,5 +152,6 @@ $grey: #757575;
     background-repeat: no-repeat;
     background-size: contain;
     margin: 2rem auto;
+    margin-bottom: 0;
   }
 }
