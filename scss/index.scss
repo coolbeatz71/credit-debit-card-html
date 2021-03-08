@@ -55,8 +55,28 @@ $grey: #757575;
         width: 100%;
 
         i {
+          background-image: none;
           position: absolute;
           top: 0.8rem;
+          right: 0.8rem;
+          width: 28px;
+          height: 18px;
+        }
+
+        .suffix-mastercard {
+          background-image: url("../img/mastercard-icon.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        .suffix-visa {
+          background-image: url("../img/visa-icon.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 1rem;
+          width: 32px;
+          height: 18px;
         }
 
         .error-icon,
