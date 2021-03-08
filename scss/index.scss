@@ -43,6 +43,10 @@ $grey: #757575;
     display: flex;
     flex-flow: column;
     margin-bottom: 3rem;
+
+    span {
+      margin-bottom: 2px;
+    }
   }
 
   .form {
