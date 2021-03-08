@@ -29,6 +29,8 @@
     display: flex;
     flex-flow: column;
     margin-bottom: 3rem; }
+    .container .payment-details span {
+      margin-bottom: 2px; }
   .container .form {
     padding: 2rem 4rem; }
     .container .form .form-group {
