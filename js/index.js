@@ -72,20 +72,10 @@ var securitycode_mask = new IMask(securitycode, {
 });
 
 var expirationdate_mask = new IMask(expirationdate, {
-  mask: Date,
-  pattern: "`m{/}`Y",
-  format: function (date) {
-    var month = date.getMonth();
-    var year = date.getFullYear();
-
-    if (month < 10) month = "0" + month;
-
-    return [month, year].join("/");
-  },
-  parse: function (str) {
-    var yearMonthDay = str.split("/");
-    var date = new Date(yearMonthDay[2], yearMonthDay[0]);
-    return date;
+  mask: "MM{/}YY",
+  groups: {
+    YY: new IMask.MaskedPattern.Group.Range([0, 99]),
+    MM: new IMask.MaskedPattern.Group.Range([1, 12]),
   },
 });
 
