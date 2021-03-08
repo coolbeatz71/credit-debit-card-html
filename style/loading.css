@@ -13,8 +13,8 @@
   /* Custom, iPhone Retina */ }
   .container .logo {
     margin: 0 4rem;
-    width: 220px;
-    height: 60px;
+    width: 170px;
+    height: 70px;
     background: url("../img/savepay.svg");
     background-repeat: no-repeat;
     background-size: contain; }
