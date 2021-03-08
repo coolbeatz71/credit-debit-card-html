@@ -81,6 +81,51 @@ $grey: #757575;
     margin: 2rem auto;
     margin-bottom: 0;
   }
+
+  @media only screen and (max-width: 375px) {
+    padding: 1rem 0;
+    .logo {
+      margin: 0 1rem !important;
+    }
+    .title {
+      margin: 0 1rem !important;
+    }
+    .payment-details {
+      margin: 1rem !important;
+    }
+    .form {
+      padding: 1rem !important;
+
+      .button {
+        width: 48% !important;
+      }
+    }
+  }
+
+  /* Custom, iPhone Retina */
+  @media only screen and (max-width: 575px) {
+    width: 95%;
+    margin: 1rem auto;
+    .logo {
+      margin: 0 2rem;
+    }
+    .title {
+      margin: 0 2rem;
+      font-size: 3.5vw;
+      text-align: center;
+    }
+    .payment-details {
+      margin: 1rem 2rem;
+      font-size: 2.6vw;
+    }
+    .form {
+      padding: 2rem;
+
+      .sk-chase {
+        margin-top: 3rem;
+      }
+    }
+  }
 }
 
 .sk-chase {
