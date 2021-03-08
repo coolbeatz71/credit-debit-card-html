@@ -17,11 +17,7 @@ task(
 task(
   "js",
   series(function () {
-    return src([
-      "node_modules/imask/dist/imask.min.js",
-      "node_modules/jquery/dist/jquery.min.js",
-      "script/*.js",
-    ])
+    return src(["node_modules/jquery/dist/jquery.min.js", "script/*.js"])
       .pipe(dest("js"))
       .pipe(browserSync.stream());
   }),
