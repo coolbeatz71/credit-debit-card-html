@@ -14,10 +14,11 @@
   .container .logo {
     margin: 0 4rem;
     width: 170px;
-    height: 70px;
+    height: 40px;
     background: url("../img/savepay.svg");
     background-repeat: no-repeat;
-    background-size: contain; }
+    background-position: center;
+    background-size: cover; }
   .container .title {
     margin: 0 4rem;
     font-size: 16px;
@@ -25,11 +26,10 @@
     color: #333333; }
   .container .payment-details {
     color: rgba(51, 51, 51, 0.6);
-    margin: 2rem 4rem;
+    margin: 3rem 4rem;
     font-size: 13px;
     display: flex;
-    flex-flow: column;
-    margin-bottom: 3rem; }
+    flex-flow: column; }
     .container .payment-details span {
       margin-bottom: 2px; }
   .container .form {

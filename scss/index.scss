@@ -23,10 +23,11 @@ $grey: #757575;
   .logo {
     margin: 0 4rem;
     width: 170px;
-    height: 70px;
+    height: 40px;
     background: url("../img/savepay.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
   }
 
   .title {
@@ -38,11 +39,10 @@ $grey: #757575;
 
   .payment-details {
     color: rgba($title, 0.6);
-    margin: 2rem 4rem;
+    margin: 3rem 4rem;
     font-size: 13px;
     display: flex;
     flex-flow: column;
-    margin-bottom: 3rem;
 
     span {
       margin-bottom: 2px;

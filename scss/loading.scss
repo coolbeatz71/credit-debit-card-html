@@ -23,10 +23,11 @@ $grey: #757575;
   .logo {
     margin: 0 4rem;
     width: 170px;
-    height: 70px;
+    height: 40px;
     background: url("../img/savepay.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
   }
 
   .title {
@@ -57,11 +58,14 @@ $grey: #757575;
 
   .payment-details {
     color: rgba($title, 0.6);
-    margin: 2rem 4rem;
+    margin: 3rem 4rem;
     font-size: 13px;
     display: flex;
     flex-flow: column;
-    margin-bottom: 3rem;
+
+    span {
+      margin-bottom: 2px;
+    }
   }
 
   .form {
@@ -71,8 +75,8 @@ $grey: #757575;
 
   .verified {
     display: flex;
-    width: 200px;
-    height: 40.46px;
+    width: 250px;
+    height: 50px;
     justify-content: center;
     align-items: center;
     background: url("../img/verified.svg");
