@@ -13,8 +13,8 @@
   /* Custom, iPhone Retina */ }
   .container .logo {
     margin: 0 4rem;
-    width: 220px;
-    height: 60px;
+    width: 170px;
+    height: 70px;
     background: url("../img/savepay.svg");
     background-repeat: no-repeat;
     background-size: contain; }
@@ -36,7 +36,7 @@
     padding: 2rem 4rem; }
     .container .form .form-group {
       width: 100%;
-      margin-bottom: 1.2rem; }
+      margin-bottom: 1.8rem; }
       .container .form .form-group .outlined-input-field {
         position: relative;
         width: 100%; }
@@ -118,8 +118,8 @@
           outline: none; }
   .container .verified {
     display: flex;
-    width: 200px;
-    height: 40.46px;
+    width: 250px;
+    height: 50px;
     justify-content: center;
     align-items: center;
     background: url("../img/verified.svg");
